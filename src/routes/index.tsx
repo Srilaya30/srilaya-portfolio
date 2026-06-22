@@ -8,7 +8,6 @@ import {
   Github,
   Linkedin,
   Mail,
-  Phone,
   MapPin,
   GraduationCap,
   Award,
@@ -36,8 +35,6 @@ const RESUME_URL =
 const LINKEDIN_URL = "https://www.linkedin.com/in/srilayamaddukuri";
 const GITHUB_URL = "https://github.com/Srilaya30";
 const EMAIL = "srilayamaddukuri4321@gmail.com";
-const PHONE_DISPLAY = "+91 8096987353";
-const PHONE_HREF = "tel:+918096987353";
 const asset = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
 const PROFILE_IMAGE_URL = asset("profile-hero.webp?v=srilaya");
 
@@ -949,7 +946,6 @@ function Contact() {
         <div className="mt-12 grid lg:grid-cols-5 gap-6">
           <div className="lg:col-span-2 glass-strong glass p-7 space-y-5">
             <ContactRow icon={Mail} label="Email" value={EMAIL} href={`mailto:${EMAIL}`} />
-            <ContactRow icon={Phone} label="Phone" value={PHONE_DISPLAY} href={PHONE_HREF} />
             <ContactRow icon={MapPin} label="Location" value="India" />
             <div className="pt-3 border-t border-white/10">
               <div className="text-xs uppercase tracking-wider text-[#94A3B8] mb-3">Find me on</div>
