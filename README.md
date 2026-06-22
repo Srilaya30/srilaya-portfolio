@@ -113,4 +113,3 @@ Deploy the generated `dist/` output to your hosting provider. After deployment, 
 - Project and certificate images load
 - Resume, GitHub, LinkedIn, project, and certificate links open correctly
 - Mobile view has no horizontal overflow
-
