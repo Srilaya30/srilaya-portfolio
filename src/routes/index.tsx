@@ -39,7 +39,7 @@ const EMAIL = "srilayamaddukuri4321@gmail.com";
 const PHONE_DISPLAY = "+91 8096987353";
 const PHONE_HREF = "tel:+918096987353";
 const asset = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
-const PROFILE_IMAGE_URL = asset("profile.jpg?v=srilaya");
+const PROFILE_IMAGE_URL = asset("profile-hero.webp?v=srilaya");
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -360,6 +360,9 @@ function Hero() {
                 alt="Maddukuri Srilaya"
                 width={1024}
                 height={1024}
+                loading="eager"
+                decoding="async"
+                fetchPriority="high"
                 className="h-full w-full object-cover object-center"
               />
             </div>
@@ -705,7 +708,7 @@ const PROJECTS = [
       "Vector embeddings",
       "AI-powered code analysis",
     ],
-    image: asset("projects/devinsight-ai-pro.png"),
+    image: asset("projects/devinsight-ai-pro.webp"),
     github: "https://github.com/Srilaya30/devinsight_ai_pro",
   },
   {
@@ -719,7 +722,7 @@ const PROJECTS = [
       "Dynamic audio control",
       "Real-time interaction",
     ],
-    image: asset("projects/hand-gesture-volume-control.png"),
+    image: asset("projects/hand-gesture-volume-control.webp"),
     github: "https://github.com/Srilaya30/Hand-Gesture-Volume-Control-System",
   },
   {
@@ -733,7 +736,7 @@ const PROJECTS = [
       "Secure passcode generation",
       "Privacy-focused",
     ],
-    image: asset("projects/aadhaar-data-extraction.png"),
+    image: asset("projects/aadhaar-data-extraction.webp"),
     github: "https://github.com/Srilaya30/VISIOCR",
   },
 ];
@@ -754,6 +757,7 @@ function Projects() {
                   src={p.image}
                   alt={`${p.title} preview`}
                   loading="lazy"
+                  decoding="async"
                   className="h-full w-full object-cover object-center transition duration-500 hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#050816]/95 via-[#050816]/15 to-transparent" />
@@ -808,31 +812,31 @@ const CERTS = [
   {
     title: "ServiceNow Certified System Administrator (CSA)",
     url: "https://drive.google.com/file/d/1BXaiBx7ezeAfMFukk-7e6Dtp6JRVcAT_/view?usp=drive_link",
-    image: asset("certificates/servicenow-csa.png"),
+    image: asset("certificates/servicenow-csa.webp"),
     color: "#10B981",
   },
   {
     title: "ServiceNow Certified Implementation Specialist (CMDB & CSDM)",
     url: "https://drive.google.com/file/d/1UyaJoY9JiRo8T_sG_Z6N_kTLO0_rdWJ8/view?usp=drive_link",
-    image: asset("certificates/servicenow-cmdb-csdm.png"),
+    image: asset("certificates/servicenow-cmdb-csdm.webp"),
     color: "#06B6D4",
   },
   {
     title: "Salesforce Certified Agentforce Specialist",
     url: "https://drive.google.com/file/d/1Dxd0GJOUHnS5HGHnlWb6VrYD2cZ8j964/view?usp=drive_link",
-    image: asset("certificates/salesforce-agentforce-specialist.png"),
+    image: asset("certificates/salesforce-agentforce-specialist.webp"),
     color: "#8B5CF6",
   },
   {
     title: "Salesforce Certified AI Associate",
     url: "https://drive.google.com/file/d/1E2dm6N6-E_QE0NjXQyTxZWIU7YYYpJDc/view?usp=drive_link",
-    image: asset("certificates/salesforce-ai-associate.png"),
+    image: asset("certificates/salesforce-ai-associate.webp"),
     color: "#F59E0B",
   },
   {
     title: "Aviatrix Multi Cloud Network Associate",
     url: "https://drive.google.com/file/d/1n7_ko7w2vlJ0U7KLLMtD7oKt5gBohF5D/view?usp=drive_link",
-    image: asset("certificates/aviatrix-multicloud-network-associate.png"),
+    image: asset("certificates/aviatrix-multicloud-network-associate.webp"),
     color: "#EC4899",
   },
 ];
@@ -849,6 +853,7 @@ function Certifications() {
                   src={c.image}
                   alt={`${c.title} certificate`}
                   loading="lazy"
+                  decoding="async"
                   className="h-full w-full object-contain object-center transition duration-500 hover:scale-[1.03]"
                 />
               </div>
