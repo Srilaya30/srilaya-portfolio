@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect, useRef, useState, type FormEvent } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 import {
   Menu,
   X,
@@ -131,18 +131,13 @@ function BackgroundFX() {
 function Nav() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [hidden, setHidden] = useState(false);
   const [active, setActive] = useState("home");
-  const lastScrollY = useRef(0);
 
   useEffect(() => {
     const onScroll = () => {
       const currentY = window.scrollY;
-      const isScrollingDown = currentY > lastScrollY.current;
 
       setScrolled(currentY > 20);
-      setHidden(isScrollingDown && currentY > 140);
-      lastScrollY.current = currentY;
 
       const y = currentY + 120;
       for (const [id] of NAV) {
@@ -162,7 +157,7 @@ function Nav() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-[transform,padding,opacity] duration-500 ease-out will-change-transform ${
         scrolled ? "py-2" : "py-4"
-      } ${hidden && !open ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100"}`}
+      } translate-y-0 opacity-100`}
     >
       <div className={`mx-auto max-w-7xl px-4 sm:px-6 transition-all ${scrolled ? "" : ""}`}>
         <div
