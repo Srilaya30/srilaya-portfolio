@@ -818,6 +818,12 @@ function Projects() {
 /* ---------- Certifications ---------- */
 const CERTS = [
   {
+    title: "ServiceNow Certified Application Developer (CAD)",
+    url: "https://drive.google.com/file/d/1WIZRWqt8KdamBY79TuwLZNDGDydYtEOZ/view?usp=drive_link",
+    image: asset("certificates/servicenow-cad.webp"),
+    color: "#62D84E",
+  },
+  {
     title: "ServiceNow Certified System Administrator (CSA)",
     url: "https://drive.google.com/file/d/1BXaiBx7ezeAfMFukk-7e6Dtp6JRVcAT_/view?usp=drive_link",
     image: asset("certificates/servicenow-csa.webp"),
